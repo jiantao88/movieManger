@@ -2,7 +2,8 @@
   "editor.defaultFormatter": "rust-lang.rust-analyzer",
   "editor.formatOnSave": true,
   "rust-analyzer.linkedProjects": [
-    "./api/lib/Cargo.toml"
-  ]
-
+    "./api/lib/Cargo.toml",
+    "./api/shuttle/cargo.toml"
+  ],
+  "editor.formatOnSaveMode": "modifications"
 }
