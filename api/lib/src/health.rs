@@ -1,4 +1,6 @@
-use actix_web::{get, HttpResponse};
+use actix_web::{get, HttpResponse,web::ServiceConfig};
+
+pub const API_VERSION: &str = "v0.0.1";
 
 #[get("/")]
 async fn hello_world() -> &'static str {
@@ -21,6 +23,13 @@ async fn version(db: actix_web::web::Data<sqlx::PgPool>) -> String {
 #[get("/health")]
 async fn health() -> HttpResponse {
     HttpResponse::Ok()
-        .append_header(("version", "0.0.1"))
+        .append_header(("version", "v0.0.1"))
         .finish()
 }
+
+pub fn service(cfg: &mut ServiceConfig){
+    cfg.service(health);
+}
+
+
+
