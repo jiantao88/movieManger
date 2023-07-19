@@ -3,10 +3,17 @@
   "editor.formatOnSave": true,
   "rust-analyzer.linkedProjects": [
     "./api/lib/Cargo.toml",
-    "./api/shuttle/cargo.toml"
+    "./api/shuttle/cargo.toml",
+    "./front/Cargo.toml",
+    "./front/Cargo.toml"
   ],
   "editor.formatOnSaveMode": "modifications",
   "[toml]": {
     "editor.defaultFormatter": "be5invis.toml"
-  }
+  },
+  "tailwindCSS.experimental.classRegex": ["class: \"(.*)\""],
+  "tailwindCSS.includeLanguages": {
+    "rust": "html"
+  },
+
 }
