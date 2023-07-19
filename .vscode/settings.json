@@ -5,5 +5,8 @@
     "./api/lib/Cargo.toml",
     "./api/shuttle/cargo.toml"
   ],
-  "editor.formatOnSaveMode": "modifications"
+  "editor.formatOnSaveMode": "modifications",
+  "[toml]": {
+    "editor.defaultFormatter": "be5invis.toml"
+  }
 }
